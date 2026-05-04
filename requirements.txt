@@ -5,3 +5,4 @@ uvicorn
 transformers
 huggingface_hub
 torch==2.5.1+cpu
+sentencepiece
