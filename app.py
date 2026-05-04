@@ -8,7 +8,7 @@ app = FastAPI()
 MODEL_NAME = "Syetsuki/hoaxgram_app"
 
 # Load sekali saja
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 
 class RequestText(BaseModel):
