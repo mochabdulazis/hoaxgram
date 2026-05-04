@@ -1,5 +1,6 @@
 fastapi
 uvicorn
-torch
 transformers
 huggingface_hub
+torch==2.2.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
