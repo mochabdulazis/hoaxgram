@@ -4,12 +4,10 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 app = FastAPI()
-
-MODEL_NAME = "Syetsuki/hoaxgram_app"
-
 # Load sekali saja
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False)
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
+MODEL_NAME = "indobenchmark/indobert-base-p1"
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForSequenceClassification.from_pretrained("Syetsuki/hoaxgram_app")
 
 class RequestText(BaseModel):
     text: str
